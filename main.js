@@ -31,5 +31,5 @@ window.onload = function() {
             disable_scrolling()
             
         }
-    }, 1000)
+    }, 100)
 }
