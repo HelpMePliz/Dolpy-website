@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+:root {
+    --primary: #3980F3;
+    --text: #000000;
+    --background: #ffffff;
+}
+
+* {
+    padding:0;
+    margin:0;
+    font-family: 'Source Sans Pro', sans-serif;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+main {
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    /* scroll-snap-points-y: repeat(100vh); */
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+/* Header */
+.header {
+    align-items: center;
+    width:100vw;
+    height:100vh;
+    background-image: url("rss/header-bg.png");
+    padding: 120px;
+    box-sizing: border-box;
+    scroll-snap-align: start;
+}
+
+.header .wrapper {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    /* background-color: red; */
+    margin-bottom: 60px;
+}
+
+.header .logo .img {
+    width: 150px;
+    height: 120px;
+}
+
+.header .logo .name {
+    font-size: 96px;
+    font-weight: bold;
+    color: var(--primary)
+}
+
+.header .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.header .container .show{
+    transform: translateX(0%) !important;
+    opacity: 1 !important;
+}
+
+.header .container .hide{
+    transform: translateX(-40%) !important;
+    opacity: 0 !important;
+}
+
+.header .container .card {
+    transform: translateX(40%);
+    position: absolute;
+    top: 0px;
+    opacity: 0;
+    transition: 0s;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 80px;
+    box-sizing: border-box;
+    transition: 1s !important;
+}
+
+
+.header .container .card .title {
+    font-weight: bold;
+    font-size: 55px;
+}
+
+.header .container .card .img {
+    width: 420px;
+    height: 315px;
+}
+
+.header .container .card .desc {
+    text-align: center;
+    font-size: 40px !important;
+    margin: 0 25%;
+}
+
+/* Body */
+
+.video-part {
+    align-items: center;
+    width:100vw;
+    height:100vh;
+    background-image: url("rss/video-bg.png");
+    padding: 120px;
+    box-sizing: border-box;
+    scroll-snap-align: start;
+}
