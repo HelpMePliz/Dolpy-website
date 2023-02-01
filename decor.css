@@ -1,0 +1,59 @@
+.header {
+    position: relative;
+    z-index: -3;
+}
+
+.header .decor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+.header .decor .animator > * {
+    z-index: 100;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    background-position: center;
+    width: 60%;
+    height: 60%;
+}
+
+.header .decor .e1 {
+    background-image: url("rss/decor/header-1.png");
+    transform: translate(-50%, calc(30vh - 50%));
+    top:0;
+    left:0%;
+    width: 50%;
+    height: 50%;
+}
+
+.header .decor .e2 {
+    background-image: url("rss/decor/header-2.png");
+    transform: translate(-90%, calc(30vh - 50%));
+    top:0;
+    left:100%;
+    width: max(calc(40vw - 30vh + 15%), 20%);
+    height: max(calc(40vw - 30vh + 15%), 20%);
+}
+
+.header .decor .e3 {
+    background-image: url("rss/decor/header-3.png");
+    transform: translate(-60%, calc(70vh - 50%));
+    top:0;
+    left:100%;
+    width: 60%;
+    height: 60%;
+}
+
+.header .decor .e4 {
+    background-image: url("rss/decor/header-4.png");
+    transform: translate(-30%, calc(75vh - 50%));
+    top:0;
+    left:0%;
+    width: max(calc(40vw - 30vh + 15%), 20%);
+    height: max(calc(40vw - 30vh + 15%), 20%);
+}

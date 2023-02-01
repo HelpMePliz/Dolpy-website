@@ -19,6 +19,7 @@ header_card_change = function() {
 }
 
 onload = function() { 
+    var animationhandler = setInterval(animation, 1000/10);
     var header_card_change_handler = setInterval(header_card_change, 5000);
 }
 

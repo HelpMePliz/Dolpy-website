@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name = "introduction" content = "no-reference">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="animator.css" rel="stylesheet" type="text/css">
+    <link href="decor.css" rel="stylesheet" type="text/css">
     <link href="main.css" rel="stylesheet" type="text/css">
     <script src="main.js"></script>
+    <script src="animator.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -41,12 +44,19 @@
                     </div>
                 </div>
             </div>
+            <div class="decor">
+                <div class="animator animator-show" style="--moveX:-10vw;--delay:0.4s;--rotate: 5deg;"><div class="e1"></div></div>
+                <div class="animator animator-show" style="--moveX:10vw;--delay:0.2s;--rotate: 5deg;"><div class="e2"></div></div>
+                <div class="animator animator-show" style="--moveX:10vw;--delay:0.6s;--rotate: 5deg;"><div class="e3"></div></div>
+                <div class="animator animator-show" style="--moveX:-10vw;--delay:0s;--rotate: 5deg;"><div class="e4"></div></div>
+                
+            </div>
         </header>
         <div class="video-part">
             <div class="video">
                 <div class="wrapper">
                     <div class="video-container">
-                        <iframe width="1080" height="720" src="https://www.youtube.com/embed/fauobqKn8BE?vq=hd1080&controls=0&autohide=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe>
+                        <iframe src="https://www.youtube.com/embed/fauobqKn8BE?vq=hd1080&controls=1&autohide=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe>
                     </div>
                 </div>
                 <div class="subs">
