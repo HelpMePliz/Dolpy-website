@@ -1,5 +1,3 @@
-
-
 header_card_change = function() {
     let xs = document.getElementsByClassName('card')
     let i = 0, j = 0;
@@ -18,9 +16,12 @@ header_card_change = function() {
     xs[(j+1)%xs.length].classList.toggle('show')
 }
 
+const FPS = 10
+
 onload = function() { 
-    var animationhandler = setInterval(animation, 1000/10);
+    var animationhandler = setInterval(animation, 1000/FPS);
     var header_card_change_handler = setInterval(header_card_change, 5000);
+    var updownanimation_handler = this.setInterval(updownanimation, 1000)
 }
 
 window.addEventListener('onload', onload);

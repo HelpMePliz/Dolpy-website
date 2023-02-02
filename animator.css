@@ -6,7 +6,7 @@
     --duration: 0.5s;
 }
 
-.animator {
+.anim {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -18,7 +18,8 @@
     transition-delay: var(--delay);
 }
 
-.animator-show {
-    transform: translate(0, 0) rotate(0) !important;
+.show-anim .anim {
+    transform: translate(0, 0) !important;
+    transform: translate(0) !important;
     opacity: 1 !important;
 }

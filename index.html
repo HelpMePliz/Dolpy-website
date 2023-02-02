@@ -14,10 +14,10 @@
 </head>
 <body>
     <main>
-        <header class="header">
+        <header class="header section">
             <div class="wrapper">
                 <div class="logo">
-                    <img class="icon" src="rss/dolpy-icon.png"/>
+                    <img class="icon " src="rss/dolpy-icon.png"/>
                     <div class="name">Dolpy</div>
                 </div>
                 <div class="container">
@@ -45,25 +45,29 @@
                 </div>
             </div>
             <div class="decor">
-                <div class="animator animator-show" style="--moveX:-10vw;--delay:0.4s;--rotate: 5deg;"><div class="e1"></div></div>
-                <div class="animator animator-show" style="--moveX:10vw;--delay:0.2s;--rotate: 5deg;"><div class="e2"></div></div>
-                <div class="animator animator-show" style="--moveX:10vw;--delay:0.6s;--rotate: 5deg;"><div class="e3"></div></div>
-                <div class="animator animator-show" style="--moveX:-10vw;--delay:0s;--rotate: 5deg;"><div class="e4"></div></div>
-                
+                <div class="anim dockleft" style="--moveX:-10vw;--delay:0.4s;"><div class="e1"></div></div>
+                <div class="anim dockright" style="--moveX:10vw;--delay:0.2s;"><div class="e2"></div></div>
+                <div class="anim dockright" style="--moveX:10vw;--delay:0.6s;"><div class="e3"></div></div>
+                <div class="anim dockleft" style="--moveX:-10vw;--delay:0s;"><div class="e4"></div></div>
             </div>
+            <div class="updown"></div>
         </header>
-        <div class="video-part">
-            <div class="video">
-                <div class="wrapper">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/fauobqKn8BE?vq=hd1080&controls=1&autohide=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe>
-                    </div>
-                </div>
+        <div class="video-part section" id="video-part">
+            <div class="wrapper">
+                <iframe class="player" src="https://www.youtube.com/embed/fauobqKn8BE?vq=hd1080&controls=1&autohide=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe>
                 <div class="subs">
-                    <div class="text">Dolpy  | </div>
+                    <div class="text">Dolpy</div>
+                    <div class="line"></div>
                     <div class="text2">GET IT ON</div>
                 </div>
             </div>
+            <div class="decor">
+                <div class="anim docktop" style="--moveY:-10vw; --moveX:-10vw; --delay:0s;"><div class="e1"></div></div>
+                <div class="anim dockright" style="--moveX:10vw;--delay:0.2s;"><div class="e2"></div></div>
+                <div class="anim dockbottom" style="--moveY:10vw; --moveX:10vw; --delay:0s;"><div class="e3"></div></div>
+                <div class="anim dockleft" style="--moveX:-10vw;--delay:0.4s;"><div class="e4"></div></div>
+            </div>
+            <!-- <div class="updown"></div> -->
         </div>
         <div class="video-part">
 
