@@ -4,7 +4,7 @@
 
 .section {
     position: relative !important;
-    z-index: -3;
+    z-index: 0;
 }
 
 .decor {
@@ -105,4 +105,19 @@
 .video-part .decor .e4 {
     background-image: url("rss/decor/video-2.png");
     top: 70%;
+}
+
+.outline .decor .dockright > *, .outline .decor .dockleft > * {
+    width: max(calc(28vw - 24vh + 10%), 15%) !important;
+}
+
+
+.outline .decor .e2 {
+    background-image: url("rss/decor/header-2.png");
+    top: 50%;
+}
+
+.outline .decor .e4 {
+    background-image: url("rss/decor/header-4.png");
+    top: 50%;
 }

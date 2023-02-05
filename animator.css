@@ -15,11 +15,13 @@
     transform: translate(var(--moveX), var(--moveY));
     opacity: 0;
     transition-duration: var(--duration);
-    transition-delay: var(--delay);
+    /* transition-delay: var(--delay); */
+    transition-delay: 0;
 }
 
 .show-anim .anim {
     transform: translate(0, 0) !important;
     transform: translate(0) !important;
     opacity: 1 !important;
+    transition-delay: var(--delay);
 }

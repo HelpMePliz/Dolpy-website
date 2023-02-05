@@ -29,10 +29,12 @@ animation = function() {
 
 updownanimation = function() {
     let arr = document.getElementsByClassName('show-anim');
+    if (arr.length == 0) return;
+    let x = arr[0].getElementsByClassName('updown');
+    if (x.length == 0) return;
     if (updown && arr.length > 0) {
-        let x = arr[0].getElementsByClassName('updown')[0];
-        x.classList.toggle('down');
-        x.classList.add('moving');
+        x[0].classList.toggle('down');
+        x[0].classList.add('moving');
     }
-    else document.getElementsByClassName('show-anim')[0].getElementsByClassName('updown')[0].classList.remove('moving');
+    else x[0].classList.remove('moving');
 }

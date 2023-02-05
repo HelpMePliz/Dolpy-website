@@ -22,6 +22,11 @@ onload = function() {
     var animationhandler = setInterval(animation, 1000/FPS);
     var header_card_change_handler = setInterval(header_card_change, 5000);
     var updownanimation_handler = this.setInterval(updownanimation, 1000)
+    x = document.getElementsByClassName('player')[0]
+    x.addEventListener('click', function() {
+        console.log("click");
+    })
+
 }
 
 window.addEventListener('onload', onload);

@@ -18,6 +18,10 @@
     --small: 0.2em;
 }
 
+b {
+    font-size: 1em;
+}
+
 * {
     padding:0;
     margin:0;
@@ -28,7 +32,8 @@
     scroll-behavior: smooth;
     transition: 0s linear;
     /* font-size: min(calc(1em + 0.8vh + 0.1vw), 8vh); */
-    font-size: min(calc(1em + 0.8vh), 8vh);
+    /* font-size: min(calc(1em + 0.8vh), 8vh); */
+    font-size: min(calc(1rem + 4vh), 8vh);
     /* font-size: calc(1em + 0.8vh); kalo atas error di some version firefox */
 }
 
@@ -50,7 +55,7 @@ main {
     height:100vh;
     box-sizing: border-box;
     scroll-snap-align: start;
-    padding: 2em calc(2em + 0.1vw);
+    padding: 1em calc(1em + 0.1vw);
     display: flex;
     justify-content: center;
 }
@@ -88,10 +93,11 @@ main {
 }
 
 .header .wrapper {
+    /* background-color: red; */
     display: flex;
     flex-direction:column;
     justify-content:space-evenly;
-    gap: 1em;
+    gap: 0.5em;
     width: min(100vh, 80vw);
     height: 100%;
 }
@@ -194,7 +200,6 @@ main {
     border-radius: var(--normal);
     width: 100%; 
     height: 100%;
-    z-index: 1000;
 }
 
 
@@ -237,4 +242,148 @@ main {
     vertical-align: bottom;
     display: flex;
     align-items: center;
+}
+
+/* Outline */
+.outline .wrapper {
+    display: flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+    /* align-items: center; */
+    gap: 1.5em;
+    width: min(100vh, 80vw);
+    height: 100%;
+}
+
+.outline .image {
+    position: relative;
+    height: 50%;
+    width: 100%;
+    /* background: blue; */
+}
+
+.outline .image .anim > * {
+    position: absolute;
+    transform: translate(-50%, 0);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 30%;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    /* background: blue; */
+}
+
+.outline .image .left {
+    background-image: url(rss/outline-left.png);
+    transform: translate(-150%, 0);
+    background-position: right;
+}
+
+.outline .image .center {
+    background-image: url(rss/outline-center.png);
+    height: 130%;
+    width: 130%;
+}
+
+.outline .image .right {
+    background-image: url(rss/outline-right.png);
+    transform: translate(50%, 0);
+    background-position: left;
+    
+}
+
+.outline .text {
+    height: 50%;
+    text-align: center;
+}
+
+.outline .text .title {
+    font-size: var(--sub);
+}
+
+.outline .text .desc {
+    margin-top: 0.2em;
+    font-size: 0.35em;
+}
+
+/* Introduction */
+.introduction .wrapper {
+    display: flex;
+    justify-content:space-between;
+    width: 80vw;
+    height: 100%;
+    gap: var(--normal)
+}
+
+.introduction .image {
+    position: relative;
+    height: 100%;
+    width: 35%;
+    transform: scale(1.3);
+}
+
+.introduction .image .anim > * {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 14vw;
+    height: 9vw;
+    left: 50%;
+    /* background-color: red; */
+    /* background: blue; */
+}
+
+.introduction .image .top {
+    background-image: url(rss/intro-top.png);
+    top: calc(50% - 16vw);
+    transform: translate(-69%, 0%);
+    background-position: bottom;
+}
+
+.introduction .image .center {
+    transform: translate(-60%, -50%);
+    top: calc(50% + 5vw);
+    background-image: url(rss/intro-center.png);
+    width: 30vw;
+    height: 30vw;
+}
+
+.introduction .image .bottom {
+    background-image: url(rss/intro-bottom.png);
+    top: calc(50% + 4vw);
+    transform: translate(-69%, 0%);
+    background-position: top;
+    
+}
+
+.introduction .text {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--small)
+}
+
+.introduction .text .title {
+    font-size: var(--sub);
+}
+
+.introduction .text .desc {
+    font-size: 0.32em;
+    text-align: justify;
+}
+
+.introduction .text .blue-desc {
+    margin-top: 0.4em;
+    font-size: 0.4em;
+    color: #1C51A5;
+    text-align: center;
+}
+
+.introduction .text .desc2 {
+    font-size: 0.3em;
+    text-align: justify;
 }
