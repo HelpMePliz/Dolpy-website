@@ -20,9 +20,11 @@
 
 b {
     font-size: 1em;
+    font-weight: 800;
 }
 
 * {
+    position: relative;
     padding:0;
     margin:0;
     font-family: 'Source Sans Pro', sans-serif;
@@ -244,6 +246,37 @@ main {
     align-items: center;
 }
 
+/* Theme */
+.section .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--small)
+}
+
+.section .text .title {
+    font-size: calc(var(--sub) * 5 / 6);
+}
+
+.section .text .desc {
+    font-size: 0.4em;
+    text-align: justify;
+}
+
+.section .text .blue-desc {
+    margin-top: 2em;
+    font-size: 0.45em;
+    color: #1C51A5;
+    text-align: center;
+}
+
+.section .text .desc2 {
+    font-size: 0.35em;
+    text-align: justify;
+    line-height: 1.25em;
+}
+
+
 /* Outline */
 .outline .wrapper {
     display: flex;
@@ -306,12 +339,13 @@ main {
 .outline .text .desc {
     margin-top: 0.2em;
     font-size: 0.35em;
+    text-align: center !important;
 }
 
 /* Introduction */
 .introduction .wrapper {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     width: 80vw;
     height: 100%;
     gap: var(--normal)
@@ -321,7 +355,7 @@ main {
     position: relative;
     height: 100%;
     width: 35%;
-    transform: scale(1.3);
+    transform: translateX(3vw) scale(1.2);
 }
 
 .introduction .image .anim > * {
@@ -361,29 +395,131 @@ main {
 
 .introduction .text {
     width: 60%;
+}
+
+.introduction .text .image-vivaldi {
+    width: 100%;
+    height: 30%;
+    margin-top: var(--small);
+    background-image: url("rss/vivaldi.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Conflict */
+.conflict .wrapper {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: var(--small)
+    justify-content: space-between;
+    width: 80vw;
+    height: 100%;
+    gap: var(--normal)
 }
 
-.introduction .text .title {
-    font-size: var(--sub);
+.conflict .image {
+    position: relative;
+    height: 100%;
+    width: 35%;
+    transform: translateX(3vw) scale(1.25);
 }
 
-.introduction .text .desc {
-    font-size: 0.32em;
-    text-align: justify;
+.conflict .image .anim > * {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 20vw;
+    height: 9vw;
+    left: 50%;
+    /* background-color: red; */
+    /* background: blue; */
 }
 
-.introduction .text .blue-desc {
-    margin-top: 0.4em;
-    font-size: 0.4em;
-    color: #1C51A5;
-    text-align: center;
+.conflict .image .top {
+    background-image: url(rss/conflict-up.png);
+    top: calc(50% - 14vw);
+    transform: translate(-56%, 0%);
+    background-position: bottom;
 }
 
-.introduction .text .desc2 {
-    font-size: 0.3em;
-    text-align: justify;
+.conflict .image .center {
+    transform: translate(-60%, -50%);
+    top: calc(40% + 5vw);
+    background-image: url(rss/conflict-center.png);
+    width: 30vw;
+    height: 30vw;
+}
+
+.conflict .image .bottom {
+    background-image: url(rss/conflict-bottom.png);
+    top: calc(50% + 6vw);
+    transform: translate(-84%, 0%);
+    background-position: top;
+    
+}
+
+.conflict .text {
+    width: 60%;
+}
+
+.conflict .text * {
+    text-align: end !important;
+}
+
+/* Promotion */
+.promotional .wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    height: 100%;
+    gap: var(--normal)
+}
+
+.promotional .image {
+    position: relative;
+    height: 100%;
+    width: 35%;
+    transform: translateX(3vw) scale(1.25);
+}
+
+.promotional .image .anim > * {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 14vw;
+    height: 9vw;
+    left: 50%;
+    /* background-color: red; */
+    /* background: blue; */
+}
+
+.promotional .image .top {
+    background-image: url(rss/promotion-up.png);
+    top: calc(50% - 16vw);
+    transform: translate(-69%, 0%);
+    background-position: bottom;
+}
+
+.promotional .image .center {
+    transform: translate(-65%, -50%);
+    top: calc(50% + 2vw);
+    background-image: url(rss/promotion-center.png);
+    width: 30vw;
+    height: 30vw;
+}
+
+.promotional .image .bottom {
+    background-image: url(rss/promotion-bottom.png);
+    top: calc(50% + 4vw);
+    transform: translate(-69%, 0%);
+    background-position: top;
+}
+
+.promotional .text {
+    width: 60%;
+}
+
+.topmost {
+    z-index: 99 !important;
 }
