@@ -2,15 +2,17 @@ function isInViewport(element) {
     const rect = element.getBoundingClientRect();
     return (
         rect.top >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+        rect.bottom <= (window.innerHeight * 1.1 || document.documentElement.clientHeight * 1.1)
     )
 }
 
-var updown = false
-var updownhandler = 0
+var updown = false;
+var updownhandler = 0;
 
 animation = function() {
     let arrs = document.getElementsByClassName('section')
+    // const rect = arrs[0].getBoundingClientRect();
+    // console.log([rect.top, rect.bottom, window.innerHeight])
     for (x of arrs) {
         if (isInViewport(x)) {
             if (x.classList.contains('show-anim')) continue;
