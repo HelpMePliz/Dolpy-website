@@ -276,6 +276,166 @@ main {
     line-height: 1.25em;
 }
 
+/* Nutshell + Cast */
+.nutcast .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    gap: 0.5em;
+    width: 90vw;
+    height: 100%;
+}
+
+.nutcast .text {
+    height: 40%;
+    text-align: center;
+}
+
+.nutcast .text .desc {
+    text-align: center !important;
+    padding: 0 4em;
+}
+
+.nutcast .cast {
+    height: calc(30vw + 1em);
+}
+
+.nutcast .cast .container {
+    position: relative;
+    width: 100%;
+    height: 25vw;
+    overflow: hidden;
+}
+
+/* .nutcast .container .show{
+    transform: translateX(0%) !important;
+    opacity: 1 !important;
+}
+
+.nutcast .container .hide{
+    transform: translateX(-50%) !important;
+    opacity: 0 !important;
+} */
+
+.nutcast .container .card {
+    background: linear-gradient(180deg, #6099F6 0%, #001942 100%);
+    width: 25vw;
+    height: 25vw;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 1s;
+    border-radius: 0.3em;
+}
+
+.nutcast .container .card .name {
+    font-size: 0.5em;
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    text-align: center;
+    color:white;
+}
+
+.nutcast .container .card-wrapper:nth-child(2) .card {
+    left: 15%;
+    transform: translateX(-50%) scale(0.7);
+    z-index: 1;
+    filter: blur(0.05em) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    opacity: 1;
+}
+
+.nutcast .container .card-wrapper:nth-child(3) .card  {
+    left: 30%;
+    transform: translateX(-50%) scale(0.85);
+    z-index: 2;
+    filter: blur(0.025em) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    opacity: 1;
+}
+
+.nutcast .container .card-wrapper:nth-child(4) .card  {
+    left: 50%;
+    transform: translateX(-50%) scale(1);
+    z-index: 3;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    opacity: 1;
+}
+
+.nutcast .container .card-wrapper:nth-child(5) .card {
+    left: 70%;
+    transform: translateX(-50%) scale(0.85);
+    z-index: 2;
+    filter: blur(0.025em) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    opacity: 1;
+}
+
+.nutcast .container .card-wrapper:nth-child(6) .card {
+    left: 85%;
+    transform: translateX(-50%) scale(0.7);
+    z-index: 1;
+    filter: blur(0.05em) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    opacity: 1;
+}
+
+.nutcast .container .card-wrapper:nth-child(7) .card {
+    left: 100%;
+    transform: translateX(-50%) scale(0.5);
+    z-index: 0;
+    filter: blur(0.05em) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    opacity: 0;
+}
+
+.nutcast .container .card-wrapper:nth-child(1) .card {
+    left: 0%;
+    transform: translateX(-50%) scale(0.5);
+    z-index: 0;
+    filter: blur(0.1em) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    opacity: 0;    
+    transition: 1s;
+}
+
+.nutcast .container .card-wrapper .card {
+    left: -50%;
+    transform: translateX(-50%) scale(0.5);
+    z-index: 0;
+    filter: blur(0.1em) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    opacity: 0;    
+    transition: 1s;
+}
+
+
+/* .nutcast .container .card {
+    transform: translateX(50%);
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0em;
+    box-sizing: border-box;
+    width: 100%;
+    transition: transform 1s, opacity 1s;
+} */
+
+
+.nutcast .container .card .title {
+    font-weight: bold;
+    font-size: var(--sub);
+}
+
+.nutcast .container .card .img {
+    height: 3em;
+    width: 100%;
+    object-fit: contain;
+    /* width: 420px;
+    height: 315px; */
+}
 
 /* Outline */
 .outline .wrapper {

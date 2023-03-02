@@ -1,5 +1,5 @@
 header_card_change = function() {
-    let xs = document.getElementsByClassName('card')
+    let xs = document.getElementsByClassName('header')[0].getElementsByClassName('card')
     let i = 0, j = 0;
     for (let x of xs) {
         if (x.classList.contains('hide')) {
@@ -17,6 +17,21 @@ header_card_change = function() {
 }
 
 const FPS = 10
+function cast_duplicate(parent){
+    NodeList.prototype.forEach = Array.prototype.forEach;
+    let children = parent.childNodes;
+    children.forEach(function(item){
+        let cln = item.cloneNode(true);
+        parent.appendChild(cln);
+    });
+};
+
+var cast;
+function cast_nextcard() {
+    let x = cast.getElementsByClassName('card-wrapper')[0];
+    cast.removeChild(x)
+    cast.appendChild(x)
+}
 
 onload = function() { 
     var animationhandler = setInterval(animation, 1000/FPS);
@@ -26,7 +41,9 @@ onload = function() {
     x.addEventListener('click', function() {
         console.log("click");
     })
-
+    cast = document.getElementsByClassName('nutcast')[0].getElementsByClassName('container')[0]
+    cast_duplicate(cast);
+    var cast_nextcard_handler = setInterval(cast_nextcard, 5000);
 }
 
 window.addEventListener('onload', onload);
