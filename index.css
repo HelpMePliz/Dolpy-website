@@ -61,7 +61,7 @@
 
 .video-part .subs {
     width: 100%;
-    padding-left: 10%;
+    padding-left: 5%;
     box-sizing: border-box;
     display: flex;
     gap: var(--h5);
@@ -92,6 +92,11 @@
     letter-spacing: 0.34em;
     width: auto;
     transform: translateY(20%);
+}
+
+.video-part .subs .store img {
+    height: 0.7rem;
+    transform: translateY(15%);
 }
 
 /* Nutcast */
