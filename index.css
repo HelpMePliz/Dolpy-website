@@ -1,5 +1,4 @@
 /* Header */
-
 .header .container {
     position: relative;
     width: 100%;
@@ -457,4 +456,32 @@
     background-image: url(rss/footer/Vector\ 138.png);
     width: 8vw !important;
     height: 8vw !important;
+}
+
+/* Updown */
+.show-anim .updown {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    width: 1em;
+    height: 1em;
+    transform: translate(-50%, 0) rotate(180deg);
+    transition: transform 0.5s;
+}
+
+.show-anim .down {
+    transform: translate(-50%, -150%) rotate(180deg) !important;
+}
+
+.updown {
+    background-image: url("rss/slide-up.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0;
+    z-index: 1;
+}
+
+.moving {
+    opacity: 1;
 }
