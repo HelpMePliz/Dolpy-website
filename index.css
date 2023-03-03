@@ -128,23 +128,23 @@
 }
 
 .nutcast .cast .i1::after {
-    background-image: url(rss/Cast/Er.png);
+    background-image: url(rss/cast/Er.png);
 }
 
 .nutcast .cast .i2::after {
-    background-image: url(rss/Cast/Shilci.png);
+    background-image: url(rss/cast/Shilci.png);
 }
 
 .nutcast .cast .i3::after {
-    background-image: url(rss/Cast/Jolee.png);
+    background-image: url(rss/cast/Jolee.png);
 }
 
 .nutcast .cast .i4::after {
-    background-image: url(rss/Cast/Van.png);
+    background-image: url(rss/cast/Van.png);
 }
 
 .nutcast .cast .i5::after {
-    background-image: url(rss/Cast/Ton.png);
+    background-image: url(rss/cast/Ton.png);
 }
 
 .nutcast .cast .container {
